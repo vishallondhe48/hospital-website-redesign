@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 5vw;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 10vw;
+  }
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.nav-wrapper nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.nav-wrapper nav .nav-toggler {
+  position: fixed;
+  top: 5%;
+  right: 5vw;
+  z-index: 10005;
+}
+
+.nav-wrapper nav .logo {
+  padding: 1rem 0;
+}
+
+.nav-wrapper nav .nav-links {
+  display: none;
+}
+
+.nav-wrapper nav .nav-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  padding: .5rem;
+}
+
+.nav-wrapper nav .nav-links a:hover {
+  color: black;
+}
+
+.nav-wrapper nav .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .nav-wrapper nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-wrapper nav .nav-toggler {
+    right: 10vw;
+    display: none;
+  }
+  .nav-wrapper nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.header .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.header .content .text-section {
+  color: #406ab8;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.header .content .image-wrapper img {
+  width: 300px;
+}
+
+.header .content .cta {
+  position: absolute;
+  bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  .header .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .content .text-section h1 {
+    width: 0;
+    font-size: 76px;
+  }
+  .header .content .image-wrapper {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header .content .image-wrapper img {
+    width: 560px;
+  }
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
+}
+
+.description .content {
+  padding-top: 18vh;
+  margin-bottom: 2rem;
+}
+
+.description .content h2 {
+  margin-bottom: 2rem;
+  color: #406ab8;
+  font-weight: 500;
+}
+
+.description .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.description .cards .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+  width: 270px;
+  height: 270px;
+}
+
+.description .cards .card .background-image {
+  width: 250px;
+  height: 250px;
+  background-image: url(/images/jonathan-borba-v_2FRXEba94-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.description .cards .card .background-image:hover {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.description .cards .card p {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  color: white;
+  background: crimson;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .description .cards {
+    margin-left: 0;
+    width: 60vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .description .cards .card {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+  }
+  .description .cards .card:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.footer-wrapper {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.footer-wrapper footer {
+  padding: 2rem 0;
+  font-weight: 300;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.footer-wrapper footer .footer-title {
+  margin-bottom: 1rem;
+}
+
+.footer-wrapper footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-wrapper footer .social-icons a {
+  text-decoration: none;
+}
+
+.footer-wrapper .footer-text {
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=main.css.map */
