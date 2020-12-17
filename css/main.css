@@ -144,9 +144,45 @@ body {
   width: 300px;
 }
 
-.header .content .cta {
+.header .content .cta-section {
   position: absolute;
   bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .content .cta-section p {
+  text-transform: uppercase;
+}
+
+.header .content .cta-section svg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.header .content .cta-section svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.header .content .cta-section svg:hover path {
+  fill: #fa7900;
 }
 
 @media (min-width: 768px) {
@@ -226,40 +262,62 @@ body {
   margin-bottom: 2rem;
   width: 270px;
   height: 270px;
-}
-
-.description .cards .card .background-image {
-  width: 250px;
-  height: 250px;
-  background-image: url(/images/jonathan-borba-v_2FRXEba94-unsplash.jpg);
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
-.description .cards .card .background-image:hover {
+.description .cards .card:hover {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
 }
 
 .description .cards .card p {
   position: absolute;
-  bottom: -5%;
-  left: -5%;
+  bottom: 0;
+  width: 100%;
   color: white;
-  background: crimson;
+  background: #1b1b1b;
+  text-transform: uppercase;
+  font-weight: 500;
   padding: 1rem;
 }
 
+.description .cards .card p span {
+  font-weight: 300;
+}
+
+.description .cards .card p:hover {
+  color: crimson;
+}
+
+.description .cards #one {
+  background-image: url(/images/coronavirus.jpg);
+}
+
+.description .cards #two {
+  background-image: url(/images/medical-treatment.jpg);
+}
+
+.description .cards #three {
+  background-image: url(/images/departments.jpg);
+}
+
 @media (min-width: 768px) {
+  .description {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .description .content h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
   .description .cards {
-    margin-left: 0;
-    width: 60vw;
+    width: 65vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -300,11 +358,11 @@ body {
   grid-gap: 1rem;
 }
 
-.footer-wrapper footer .footer-title {
-  margin-bottom: 1rem;
+.footer-wrapper footer .social-links .footer-title {
+  margin-bottom: 3rem;
 }
 
-.footer-wrapper footer .social-icons {
+.footer-wrapper footer .social-links .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,7 +375,7 @@ body {
           justify-content: space-between;
 }
 
-.footer-wrapper footer .social-icons a {
+.footer-wrapper footer .social-links .social-icons a {
   text-decoration: none;
 }
 
@@ -325,5 +383,26 @@ body {
   text-align: center;
   padding: 1rem 0;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .footer-wrapper footer .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .footer-wrapper footer .social-links .footer-title {
+    margin-bottom: 0;
+  }
+  .footer-wrapper footer .social-links .social-icons {
+    width: 20vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
